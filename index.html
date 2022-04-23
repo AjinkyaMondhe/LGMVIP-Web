@@ -7,207 +7,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background: #0c0900d9
+            /* background: url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80) center ; */
+           
+        }
+
         .container {
-            background: url(https://images.unsplash.com/photo-1588941288434-35b689c99a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) no-repeat;
-            background-size: cover;
-            display: grid;
-            /* border: 2PX solid brown; */
-            margin: -83px;
-            padding: 117px;
-            display: flex;
-            height: 435px;
-            width: 1100px;
-            align-items: center;
+            /* display: flex;
             justify-content: center;
+            align-items: center; */
+            width: 283px;
+            margin-left: 469px;
+            height: 428px;
+            padding-bottom: 15px;
+            border-radius: 7px;
+            background-color: rgb(0 0 0 / 94%);
+
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+            /* opacity: 30%; */
+            /* background-color: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(5px); */
         }
 
-        .item {
-            border: 2px solid rgb(240, 228, 207);
-            align-self: center;
-            justify-items: center;
-            height: 544px;
-            width: 409px;
-            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, .15);
-            backdrop-filter: blur(5px);
-            /* overflow: scroll; */
-            text-align: center;
-
+        .display {
+            width: 100%;
+            height: 80px;
+            border: none;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: rgb(255 79 79 / 93%);
+            color: #000;
+            text-align: right;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
         }
 
-        .logo {
-            display: inline-block;
-            /* border: 2px solid black; */
-            align-self: flex-start;
-            font-family: 'Lobster', cursive;
-            margin: -3px;
-            margin-top: 2px;
-            padding-left: 66px;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            box-shadow: 0 0 1rem 0 rgb(0 6 4 / 91%);
-            border-radius: 46px;
-            background-color: rgba(255, 255, 255, 0.493);
-            backdrop-filter: blur(10px);
-            color: #06456ae8;
-        }
-
-
-        ul li {
-            margin: 12px;
-            padding: 9px;
-            font-family: 'Quintessential', cursive;
-            color: rgb(4, 5, 5);
-            text-align: left;
-            background-color: rgb(25 26 26 / 16%);
-            text-shadow: #06456ae8;
-            font-size: smaller;
-        }
-
-        ul li span {
-            background: #16020247;
-            float: right;
-            margin: -8px;
-            padding: 9px;
-
-        }
-
-        ul li span:hover {
-            cursor: pointer;
-        }
-
-        */ .note :hover {
-            color: black;
-        }
-
-        ul li:hover {
-            background: rgb(197, 193, 193);
-            cursor: pointer;
-        }
-
-        .item button :hover {
-            background: #06456ae8;
-        }
-
-
-        /* .right {
-            color: rgb(0, 8, 8);
-            /* border: solid brown; */
-        /* position: absolute;
-            align-self: flex-end;
-            right: 9px;
-            top: 8px;
-            display: inline-block;
-            box-shadow: 0 0 1rem 0 rgb(0 6 4 / 91%);
-            border-radius: 46px;
-            background-color: rgba(255, 255, 255, 0.493);
-            backdrop-filter: blur(10px);
-            color: #eaf0f3e8;
-            border-radius: 2px; */
-
-        /* } */
-
-        .add {
+        .row {
             margin: 2px;
-            padding: 2px;
-            background: #3a353552;
-            box-shadow: rgb(77 102 94 / 21%);
-
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
         }
 
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 21px 5px;
+            border: none;
+            outline: none;
+            font-size: 2rem;
+            background-color: rgb(0 0 0 / 1%);
+            color: rgb(255 79 79 / 93%);
+            margin: 10px;
+            box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+        }
 
-
-        #task {
-            background-color: rgb(240, 228, 215);
+        button:hover {
+            cursor: pointer;
+            background: rgb(230, 89, 89);
             color: black;
-            border-radius: 4px;
+        }
+
+        .op {
+            color: rgb(243, 240, 240);
         }
     </style>
 </head>
 
 <body>
-    <div class="logo" id="log">
-        <h2></h2>
-        <!-- <img src="images 2.jpg" > -->
-    </div>
-    <div class="container" id="cont">
-
-        <div class="item" id="item-1">
-
-            <div>
-                <br>
-                <label for="ftask">My To Do List!</label><br><br>
-                <input type="text" id="myInput" placeholder="Hola...">
-                <span onclick="newElement()" class="add">Add</span>
+    <div class="container">
+        <input type="text" class="display" disabled>
+        <div class="keys">
+            <div class="row">
+                <button value="7">7</button>
+                <button value="8">8</button>
+                <button value="9">9</button>
+                <button value="+" class="op">+</button>
             </div>
-            <UL id="ul">
-                <li> go to swim</li>
-                <li> post blog </li>
-                <li> yoga class </li>
-                <li> Hit the gym </li>
-                <li> buy food</li>
-            </UL>
-
-            <!-- </div>
-        <div class="right">
-            <button class="btn"> sign in / sign up</button>
-        </div> -->
-            <script>
-
-                var myNodelist = document.getElementsByTagName("LI");
-                var i;
-                for (i = 0; i < myNodelist.length; i++) {
-                    var span = document.createElement("SPAN");
-                    var txt = document.createTextNode("\u00D7");
-                    span.className = "close";
-                    span.appendChild(txt);
-                    myNodelist[i].appendChild(span);
-                }
-
-                var close = document.getElementsByClassName("close");
-                var i;
-                for (i = 0; i < close.length; i++) {
-                    close[i].onclick = function () {
-                        var div = this.parentElement;
-                        div.style.display = "none";
-                    }
-                }
-                var list = document.querySelector('ul');
-                list.addEventListener('click', function (ev) {
-                    if (ev.target.tagName === 'LI') {
-                        ev.target.classList.toggle('checked');
-                    }
-                }, false);
-
-
-                function newElement() {
-                    var li = document.createElement("li");
-                    var inputValue = document.getElementById("myInput").value;
-                    var t = document.createTextNode(inputValue);
-                    li.appendChild(t);
-                    if (inputValue === '') {
-                        alert("You must write something!");
-                    } else {
-                        document.getElementById("ul").appendChild(li);
-                    }
-                    document.getElementById("myInput").value = "";
-
-                    var span = document.createElement("SPAN");
-                    var txt = document.createTextNode("\u00D7");
-                    span.className = "close";
-                    span.appendChild(txt);
-                    li.appendChild(span);
-
-                    for (i = 0; i < close.length; i++) {
-                        close[i].onclick = function () {
-                            var div = this.parentElement;
-                            div.style.display = "none";
-                        }
-                    }
-                }
-            </script>
+            <div class="row">
+                <button value="4">4</button>
+                <button value="5">5</button>
+                <button value="6">6</button>
+                <button value="-" class="op">-</button>
+            </div>
+            <div class="row">
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button value="*" class="op">*</button>
+            </div>
+            <div class="row">
+                <button value="0">0</button>
+                <button value="C" class="op">C</button>
+                <button value="/" class="op">/</button>
+                <button value="=" class="op">=</button>
+            </div>
         </div>
+
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('button');
+        const display = document.querySelector('.display');
+        buttons.forEach(function (button) {
+            button.addEventListener('click', calculate);
+        });
+        function calculate(event) {
+            const clickedButtonValue = event.target.value;
+            if (clickedButtonValue === '=') {
+
+                if (display.value !== '') {
+                    display.value = eval(display.value);
+                }
+            } else if (clickedButtonValue === 'C') {
+                display.value = '';
+            } else {
+                display.value += clickedButtonValue;
+            }
+        }
+    </script>
 </body>
 
 </html>
